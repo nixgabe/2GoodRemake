@@ -1,5 +1,12 @@
 {
   "devDependencies": {
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^1.9.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build-css": "tailwindcss build -i ./src/input.css -o ./public/output.css",
+    "watch-css": "tailwindcss build -i ./src/input.css -o ./public/output.css --watch",
+    "dev": "concurrently \"npm run watch-css\" \"npm start\""
   }
+    
 }
